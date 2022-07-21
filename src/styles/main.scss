@@ -6,8 +6,18 @@
 
 /* Base */
 @import './base/base';
+@import './base/fonts';
+@import './base/typo';
+
 /* Components */
+@import './components/buttons';
+@import './components/images';
 
 /* Layouts */
 @import './layout/header';
+@import './layout/footer';
 @import './layout/navigations';
+@import './layout/section';
+@import './layout/hero';
+@import './layout/about';
+@import './layout/experiences';

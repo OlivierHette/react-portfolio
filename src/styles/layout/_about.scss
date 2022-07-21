@@ -1,0 +1,35 @@
+.about {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    width: 300px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    background: $secondary-color;
+    border-radius: 13px;
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5px;
+    }
+    
+    & > i {
+      color: $quaternary-color;
+    }
+  }
+
+  &__content-text {
+    text-align:justify;
+    margin: 0 10px;
+  }
+}

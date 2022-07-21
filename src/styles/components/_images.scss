@@ -1,0 +1,13 @@
+.image {
+  &--rounded {
+    height: 215px;
+    width: 215px;
+    border-radius: 50%;
+    border: 5px solid $quaternary-color;
+  }
+  &--radius {
+    height: 170px;
+    width: 170px;
+    border-radius: 13px;
+  }
+}
