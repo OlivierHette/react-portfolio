@@ -1,0 +1,16 @@
+body {
+  background: $primary-color;
+  color: $text-color;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.container {
+  max-width: 968px;
+  margin: 0 1rem;
+}
