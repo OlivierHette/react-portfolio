@@ -1,0 +1,48 @@
+.experiences {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__ability {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 320px;
+    }
+
+  }
+
+  &__card {
+    background: $secondary-color;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 13px;
+    padding: 20px 10px;
+    margin: 0 10px;
+  }
+
+  &__ability {
+    width: 45%;
+    display: flex;
+    margin: 10px auto;
+
+    & > i {
+      color: $quaternary-color;
+    }
+    
+    &-text {
+      width: 100%;
+      line-height: 1rem;
+      margin-left: 10px;
+    }
+
+    &:last-child {
+      margin: 10px 7px;
+    }
+  }
+}

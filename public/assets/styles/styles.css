@@ -75,12 +75,12 @@ span, p, h2, h4 {
 
 h3 {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(254, 156, 55);
 }
 
 h4 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .text-xs {
@@ -232,6 +232,46 @@ footer {
 .about__content-text {
   text-align: justify;
   margin: 0 10px;
+}
+
+.experiences__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.experiences__container__ability {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 320px;
+}
+.experiences__card {
+  background: rgb(105, 50, 55);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 13px;
+  padding: 20px 10px;
+  margin: 0 10px;
+}
+.experiences__ability {
+  width: 45%;
+  display: flex;
+  margin: 10px auto;
+}
+.experiences__ability > i {
+  color: rgb(254, 156, 55);
+}
+.experiences__ability-text {
+  width: 100%;
+  line-height: 1rem;
+  margin-left: 10px;
+}
+.experiences__ability:last-child {
+  margin: 10px 7px;
 }
 
 /*# sourceMappingURL=styles.css.map */
