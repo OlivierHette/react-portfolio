@@ -1,8 +1,9 @@
-import { HashLink as Link } from 'react-router-hash-link'
+/* eslint-disable require-jsdoc */
+import {HashLink as Link} from 'react-router-hash-link';
+import React from 'react';
 
-function Header () {
-  
-  return(
+function Header() {
+  return (
     <header>
       <nav className="nav container">
         <Link to="/" className="nav__logo">oh </Link>
@@ -17,7 +18,7 @@ function Header () {
 
             <li className="nav__item">
               <Link to="/#about" className="nav__link">
-                  <i className='bx bx-user' ></i>
+                <i className='bx bx-user' ></i>
               </Link>
             </li>
 
@@ -45,7 +46,7 @@ function Header () {
         <i className='bx bx-moon change-theme' id='theme-button'></i>
       </nav>
     </header>
-  )
+  );
 }
 
 export default Header;

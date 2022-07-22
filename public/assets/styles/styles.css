@@ -63,6 +63,11 @@ a {
   max-width: 968px;
   margin: 0 1rem;
 }
+.container--about {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
 .container--card {
   display: flex;
   flex-direction: column;
@@ -155,6 +160,12 @@ h4 {
   margin-top: 5px;
   color: rgb(254, 156, 55);
 }
+.card--contact {
+  gap: 0;
+}
+.card > i {
+  color: rgb(254, 156, 55);
+}
 
 /* Layouts */
 header {
@@ -245,11 +256,6 @@ footer {
   justify-content: space-around;
 }
 
-.about__container {
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-}
 .about__item {
   display: flex;
   flex-direction: column;

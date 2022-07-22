@@ -19,4 +19,11 @@
     margin-top: 5px;
     color: $quaternary-color;
   }
+
+  &--contact {
+    gap: 0;
+  }
+  & > i {
+    color: $quaternary-color;
+  }
 }

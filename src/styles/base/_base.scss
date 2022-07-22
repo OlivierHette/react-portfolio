@@ -5,9 +5,9 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-main {
-  // overflow: hidden;
-}
+// main {
+//   // overflow: hidden;
+// }
 
 a {
   text-decoration: none;
@@ -17,6 +17,13 @@ a {
 .container {
   max-width: 968px;
   margin: 0 1rem;
+
+  &--about {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    width: 300px;
+  }
 
   &--card {
     display: flex;
