@@ -17,4 +17,10 @@ a {
 .container {
   max-width: 968px;
   margin: 0 1rem;
+
+  &--card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }

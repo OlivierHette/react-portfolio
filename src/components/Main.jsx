@@ -1,4 +1,6 @@
 import pdpImg from '../images/profile-image.webp'
+import groupomania from '../images/projects_groupomania.webp'
+// import { Link } from 'react-router-dom'
 
 const aboutText = "Développeur full stack, je me suis formé en autodidacte depuis mes 11 ans. J’ai décidé de formaliser mes connaissances et mon experience par un diplome de développeur Full Stack."
 const abilityFront = [
@@ -19,6 +21,26 @@ const abilityBack = [
   { id: 5, name: 'PHP', level: 'Base' },
   { id: 6, name: 'GitHub', level: 'Intermediaire' },
   { id: 7, name: 'Java', level: 'Base' }
+]
+const projectsArray = [
+  { 
+    id: 1, 
+    image: groupomania,
+    alt: "Groupomania projet full stack",
+    title: "Réseau social d'entreprise", 
+    subtitle: "Avec ReactJs, NodeJs, MySQL et Sequelize.js", 
+    link: "Code",
+    url: "https://github.com/OlivierHette/Groupomania"
+  },
+  {
+    id: 2, 
+    image: groupomania,
+    alt: "Groupomania projet full stack",
+    title: "Réseau social d'entreprise",
+    subtitle: "Avec ReactJs, NodeJs, MySQL et Sequelize.js", 
+    link: "Démo",
+    url: "#"
+  }
 ]
 
 function Main() {
@@ -44,7 +66,7 @@ function Main() {
 
       <section className="section about">
         <div className="section__title">
-          <span className='text-xs'>Introduction</span>
+          <span className='text--xs'>Introduction</span>
           <h3>À propos</h3>
         </div>
 
@@ -55,7 +77,7 @@ function Main() {
             <i className='bx bx-code-curly bx-sm' ></i>
             <div className="about__item-text">
               <h4>Experiences</h4>
-              <span className='text-xs'>+ 1 an</span>
+              <span className='text--xs'>+ 1 an</span>
             </div>
           </div>
 
@@ -63,7 +85,7 @@ function Main() {
           <i className='bx bx-briefcase-alt bx-sm' ></i>
             <div className="about__item-text">
               <h4>Missions</h4>
-              <span className='text-xs'>+ 10 projets</span>
+              <span className='text--xs'>+ 10 projets</span>
             </div>
           </div>
 
@@ -71,7 +93,7 @@ function Main() {
             <i className='bx bxs-graduation bx-sm'></i>
             <div className="about__item-text">
               <h4>Formation</h4>
-              <span className='text-xs'>Bac +2</span>
+              <span className='text--xs'>Bac +2</span>
             </div>
           </div>
         </div>
@@ -79,24 +101,24 @@ function Main() {
         <p className='about__content-text' key={aboutText}>{aboutText}</p>
       </section>
 
-      <section className="section experiences">
+      <section className="section section--card experiences">
         <div className="section__title">
-          <span className='text-xs'>mes compétences</span>
+          <span className='text--xs'>mes compétences</span>
           <h3>Mon experiences</h3>
         </div>
 
-        <div className="experiences__container">
-          <div className="experiences__card">
+        <div className="container--card">
+          <div className="card">
             <h3>FrontEnd</h3>
               <div className="experiences__container__ability">
 
-                { abilityFront.map(ability => {
+                {abilityFront.map(ability => {
                     return (
-                        <div className="experiences__ability">
+                        <div key={ability.id} className="experiences__ability">
                           <i className='bx bxs-badge-check bx-sm'></i>
                           <div className="experiences__ability-text">
-                            <h4 key={ability.id}>{ability.name}</h4>
-                            <span className='text-xs'>{ability.level}</span>
+                            <h4>{ability.name}</h4>
+                            <span className='text--xs'>{ability.level}</span>
                           </div>
                         </div>
                     )
@@ -106,16 +128,16 @@ function Main() {
 
           </div>
            
-          <div className="experiences__card">
+          <div className="card">
             <h3>BackEnd</h3>
               <div className="experiences__container__ability">
                 { abilityBack.map(ability => {
                     return (
-                        <div className="experiences__ability">
+                        <div  key={ability.id} className="experiences__ability">
                           <i className='bx bxs-badge-check bx-sm'></i>
                           <div className="experiences__ability-text">
-                            <h4 key={ability.id}>{ability.name}</h4>
-                            <span className='text-xs'>{ability.level}</span>
+                            <h4>{ability.name}</h4>
+                            <span className='text--xs'>{ability.level}</span>
                           </div>
                         </div>
                     )
@@ -126,17 +148,32 @@ function Main() {
         </div>
       </section>
 
-      <section className="projects">
+      <section className="section section--card projects">
         <div className="section__title">
-          <span className='text-xs'>Mon Portfolio</span>
+          <span className='text--xs'>Mon Portfolio</span>
           <h3>Projets récent</h3>
         </div>
 
+        <div className="container--card">
+          {projectsArray.map(project => {
+            return (
+              <div key={project.id} className="card">
+                <img src={project.image} alt={project.alt} className="image image--card" height='295' width='280'/>
+                <div className="card__text">
+                  <h4 className='text--md'>{project.title}</h4>
+                  <span className='text--xs'>{project.subtitle}</span>
+                  <a className='card-link text--sm' href={project.url}>{project.link} ➔</a>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+        
       </section>
 
-      <section className="contact">
+      <section className="section contact">
         <div className="section__title">
-          <span className='text-xs'>Entrez en contact</span>
+          <span className='text--xs'>Entrez en contact</span>
           <h3>Contactez-moi</h3>
         </div>
       </section>

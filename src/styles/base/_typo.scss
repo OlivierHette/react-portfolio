@@ -16,6 +16,15 @@ h4 {
   font-weight: 600;
 }
 
-.text-xs {
-  font-size: 0.6rem;
+.text {
+  
+  &--xs {
+    font-size: 0.6rem;
+  }
+  &--sm {
+    font-size: 0.8rem;
+  }
+  &--md {
+    font-size: 1rem;
+  }
 }
