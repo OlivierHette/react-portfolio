@@ -7,13 +7,26 @@
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 400ms;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &--border-only{
     border: solid 2px $quaternary-color;
     color: $quaternary-color;
+    &:hover {
+      border-color: darken($quaternary-color, $amount: 15);
+      color: darken($quaternary-color, $amount: 15);
+    }
   }
   &--bg {
     background: $quaternary-color;
     color: $primary-color;
+    &:hover {
+      background: darken($quaternary-color, $amount: 15);
+    }
   }
 }

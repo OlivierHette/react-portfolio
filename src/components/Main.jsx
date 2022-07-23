@@ -2,6 +2,9 @@
 import pdpImg from '../images/profile-image.webp';
 import groupomania from '../images/projects_groupomania.webp';
 import React from 'react';
+// import {Link} from 'react-router-dom';
+import {HashLink as Link} from 'react-router-hash-link';
+
 
 const aboutText = {
   start: 'Développeur full stack, je me suis formé en autodidacte ',
@@ -59,17 +62,21 @@ function Main() {
           <h2>Développeur Full Stack</h2>
         </div>
         <div className="hero__btn">
-          <div className="btn btn--border-only">
-            <span>Télecharger CV</span>
-          </div>
-          <div className="btn btn--bg">
-            <span>À propos</span>
-          </div>
+          <a href="/src/download/CV.pdf" download>
+            <div className="btn btn--border-only">
+              <span>Télecharger CV</span>
+            </div>
+          </a>
+          <Link to='/#about'>
+            <div className="btn btn--bg">
+              <span>À propos</span>
+            </div>
+          </Link>
         </div>
         <img className="image image--rounded" src={pdpImg} alt="visageOlivier"/>
       </section>
 
-      <section className="section about">
+      <section className="section about" id='about'>
         <div className="section__title">
           <span className='text--xs'>Introduction</span>
           <h3>À propos</h3>
@@ -103,10 +110,12 @@ function Main() {
           </div>
         </div>
 
-        <p className='about__content-text' key={aboutText}>{aboutText}</p>
+        <p className='about__content-text' key={aboutText.start}>
+          {aboutText.start + aboutText.middle + aboutText.end}
+        </p>
       </section>
 
-      <section className="section section--card experiences">
+      <section className="section section--card experiences" id='experiences'>
         <div className="section__title">
           <span className='text--xs'>mes compétences</span>
           <h3>Mon experiences</h3>
@@ -151,7 +160,7 @@ function Main() {
         </div>
       </section>
 
-      <section className="section section--card projects">
+      <section className="section section--card projects" id='projects'>
         <div className="section__title">
           <span className='text--xs'>Mon Portfolio</span>
           <h3>Projets récent</h3>
@@ -172,7 +181,7 @@ function Main() {
                   <span className='text--xs'>{project.subtitle}</span>
                   <a href={project.url}
                     className='card-link text--sm'>
-                    {project.link} ➔
+                    {project.link} <span className="arrow-link">➔</span>
                   </a>
                 </div>
               </div>
@@ -182,7 +191,7 @@ function Main() {
 
       </section>
 
-      <section className="section contact">
+      <section className="section contact" id='contact'>
         <div className="section__title">
           <span className='text--xs'>Entrez en contact</span>
           <h3>Contactez-moi</h3>
@@ -194,7 +203,7 @@ function Main() {
               <span className="text--sm">contact@olivierhette.fr</span>
               <a href="mailto:contact@olivierhette.fr"
                 className="card-link text--sm">
-                Ecrivez-moi ➔
+                Ecrivez-moi <span className="arrow-link">➔</span>
               </a>
             </div>
 
@@ -206,7 +215,7 @@ function Main() {
                 target="_blank"
                 className="card-link text--sm"
                 rel="noreferrer">
-                Ecrivez-moi ➔
+                Ecrivez-moi <span className="arrow-link">➔</span>
               </a>
             </div>
 
@@ -218,7 +227,7 @@ function Main() {
                 target="_blank"
                 className="card-link text--sm"
                 rel="noreferrer">
-                Suivez-moi ➔
+                Suivez-moi <span className="arrow-link">➔</span>
               </a>
             </div>
           </div>

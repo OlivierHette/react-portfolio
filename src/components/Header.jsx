@@ -4,7 +4,7 @@ import React from 'react';
 
 function Header() {
   return (
-    <header>
+    <header id='home'>
       <nav className="nav container">
         <Link to="/" className="nav__logo">oh </Link>
         <div className="nav__menu">
@@ -43,7 +43,7 @@ function Header() {
           </ul>
         </div>
 
-        <i className='bx bx-moon change-theme' id='theme-button'></i>
+        {/* <i className='bx bx-moon change-theme' id='theme-button'></i> */}
       </nav>
     </header>
   );

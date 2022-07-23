@@ -18,6 +18,12 @@
   &-link {
     margin-top: 5px;
     color: $quaternary-color;
+    transition: all 400ms;
+
+    &:hover {
+      transform: translateX(10px);
+      color: $tertiary-color;
+    }
   }
 
   &--contact {

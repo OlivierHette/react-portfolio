@@ -113,14 +113,26 @@ h4 {
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 400ms;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 .btn--border-only {
   border: solid 2px rgb(254, 156, 55);
   color: rgb(254, 156, 55);
 }
+.btn--border-only:hover {
+  border-color: #e77601;
+  color: #e77601;
+}
 .btn--bg {
   background: rgb(254, 156, 55);
   color: rgb(26, 44, 68);
+}
+.btn--bg:hover {
+  background: #e77601;
 }
 
 .image--rounded {
@@ -159,6 +171,11 @@ h4 {
 .card-link {
   margin-top: 5px;
   color: rgb(254, 156, 55);
+  transition: all 400ms;
+}
+.card-link:hover {
+  transform: translateX(10px);
+  color: rgb(218, 96, 38);
 }
 .card--contact {
   gap: 0;
@@ -175,8 +192,44 @@ header {
   z-index: 1;
 }
 
-footer {
-  height: 100px;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: rgb(254, 156, 55);
+  padding-bottom: 100px;
+  margin-top: 40px;
+  color: rgb(26, 44, 68);
+}
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  min-width: 200px;
+}
+.footer__network {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
+}
+.footer__network > a {
+  color: rgb(26, 44, 68);
+  transition: all 400ms;
+}
+.footer__network > a:hover {
+  color: rgb(105, 50, 55);
+  transform: rotate(360deg) scale(1.1);
+}
+.footer__link {
+  color: rgb(26, 44, 68);
+  transition: all 400ms;
+}
+.footer__link:hover {
+  color: rgb(105, 50, 55);
+}
+.footer__logo {
+  margin-top: 40px;
+  font-size: 1.6rem;
 }
 
 .nav {
