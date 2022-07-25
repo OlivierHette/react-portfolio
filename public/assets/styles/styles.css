@@ -195,6 +195,9 @@ h4 {
 
 /* Layouts */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: rgb(26, 44, 68);
   padding-top: 20px;
@@ -245,6 +248,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 1rem;
 }
 .nav__logo {
   color: rgb(254, 156, 55);
@@ -268,7 +272,10 @@ header {
   position: fixed;
   bottom: 1rem;
   background-color: rgba(218, 96, 38, 0.8);
-  width: 90%;
+  width: 280px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   border-radius: 4rem;
   padding: 1rem 2.25rem;
   backdrop-filter: blur(10px);

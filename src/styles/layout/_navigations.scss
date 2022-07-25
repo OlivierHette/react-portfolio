@@ -1,8 +1,9 @@
 .nav {
-  // height: 0px;
+  // height: 3.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 1rem;
 
   &__logo {
     color: $quaternary-color;
@@ -27,7 +28,10 @@
     position: fixed;
     bottom: 1rem;
     background-color: $tertiary-color-8;
-    width: 90%;
+    width: 280px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     border-radius: 4rem;
     padding: 1rem 2.25rem;
     backdrop-filter: blur(10px);

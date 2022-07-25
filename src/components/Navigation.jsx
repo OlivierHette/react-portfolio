@@ -5,7 +5,7 @@ import ScrollToButton from './ScrollToButton';
 
 function Navigation() {
   return (
-    <nav className="nav container">
+    <nav className="nav">
       <Link to="/" className="nav__logo">oh </Link>
       <div className="nav__menu">
         <ul className="nav__list">
