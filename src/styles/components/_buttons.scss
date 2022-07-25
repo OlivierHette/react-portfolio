@@ -25,6 +25,7 @@
   &--bg {
     background: $quaternary-color;
     color: $primary-color;
+    border: none;
     &:hover {
       background: darken($quaternary-color, $amount: 15);
     }

@@ -53,6 +53,14 @@ body {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+  background: #101b2a;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(105, 50, 55);
+  border-radius: 8px;
+}
 
 a {
   text-decoration: none;
@@ -130,6 +138,7 @@ h4 {
 .btn--bg {
   background: rgb(254, 156, 55);
   color: rgb(26, 44, 68);
+  border: none;
 }
 .btn--bg:hover {
   background: #e77601;

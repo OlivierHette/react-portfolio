@@ -1,6 +1,7 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
 import pdpImg from '../images/profile-image.webp';
+import ScrollToButton from './ScrollToButton';
 
 function About() {
   const aboutText = {
@@ -47,6 +48,10 @@ function About() {
       <p className='about__content-text' key={aboutText.start}>
         {aboutText.start + aboutText.middle + aboutText.end}
       </p>
+
+      <ScrollToButton toId="contact" style="btn btn--bg">
+        <span>Contactez-moi</span>
+      </ScrollToButton>
     </section>
   );
 }

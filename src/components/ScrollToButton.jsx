@@ -3,22 +3,18 @@ import React from 'react';
 import {scrollTo} from '../utils/scrollTo';
 import PropTypes from 'prop-types';
 
-function ScrollToButton({toId, toRef, duration, children}) {
+function ScrollToButton({style, toId, toRef, duration, children}) {
   const handleClick = () => {
     scrollTo({id: toId, ref: toRef, duration});
   };
 
-  return (
-    <>
-      <button
-        onClick={handleClick}>
-        {children}
-      </button>
-    </>
-  );
+  return <button onClick={handleClick} className={style}>
+    {children}
+  </button>;
 }
 
 ScrollToButton.propTypes = {
+  style: PropTypes.string,
   toId: PropTypes.string,
   toRef: PropTypes.string,
   duration: PropTypes.number,

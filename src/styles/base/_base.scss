@@ -3,6 +3,15 @@ body {
   color: $text-color;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: darken($primary-color, 7);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+    border-radius: 8px;
+  }
 }
 
 // main {

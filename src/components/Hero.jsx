@@ -3,6 +3,7 @@ import CV from '../pdf/CV.pdf';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import pdpImg from '../images/profile-image.webp';
+import ScrollToButton from './ScrollToButton';
 
 function Hero() {
   return (
@@ -20,11 +21,14 @@ function Hero() {
             <span>Télecharger CV</span>
           </div>
         </Link>
-        <Link to='/#about'>
+        <ScrollToButton toId="about" style="btn btn--bg" duration={750}>
+          <span>À propos</span>
+        </ScrollToButton>
+        {/* <Link to='/#about'>
           <div className="btn btn--bg">
             <span>À propos</span>
           </div>
-        </Link>
+        </Link> */}
       </div>
       <img className="image image--rounded" src={pdpImg} alt="visageOlivier"/>
     </section>
