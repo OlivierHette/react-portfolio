@@ -1,9 +1,9 @@
 /* eslint-disable require-jsdoc */
 import pdpImg from '../images/profile-image.webp';
 import groupomania from '../images/projects_groupomania.webp';
+import CV from '../pdf/CV.pdf';
 import React from 'react';
-// import {Link} from 'react-router-dom';
-import {HashLink as Link} from 'react-router-hash-link';
+import {Link} from 'react-router-dom';
 
 
 const aboutText = {
@@ -62,11 +62,13 @@ function Main() {
           <h2>Développeur Full Stack</h2>
         </div>
         <div className="hero__btn">
-          <a href="/src/download/CV.pdf" download>
+          <Link to={CV}
+            target='_blank'
+            download ="CV_HetteOlivier.pdf">
             <div className="btn btn--border-only">
               <span>Télecharger CV</span>
             </div>
-          </a>
+          </Link>
           <Link to='/#about'>
             <div className="btn btn--bg">
               <span>À propos</span>

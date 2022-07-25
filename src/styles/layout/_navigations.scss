@@ -38,20 +38,33 @@
     justify-content: space-between;
     align-items: center;
   }
+  
+  &__item {
+    & > button {
+      color: $text-color;
+      font-size: 1.25rem;
+      padding: 0.4rem;
+      display: flex;
+      border-radius: 5rem;
+      border: none;
+      background-color: unset;
+      cursor: pointer;
 
-  &__link {
-    color: $text-color;
-    font-size: 1.25rem;
-    padding: 0.4rem;
-    display: flex;
-    border-radius: 5rem;
+      &:hover {
+        background: linear-gradient(180deg,
+              $gradian-color-light,
+              $gradian-color-dark            
+        );
+        box-shadow: 0 0 16px $gradian-color-dark;
+      }
+    }
   }
 }
 
-.active-link {
-  background: linear-gradient(180deg,
-              $gradian-color-light,
-              $gradian-color-dark            
-  );
-  box-shadow: 0 0 16px $gradian-color-dark;
-}
+// .active-link {
+//   background: linear-gradient(180deg,
+//               $gradian-color-light,
+//               $gradian-color-dark            
+//   );
+//   box-shadow: 0 0 16px $gradian-color-dark;
+// }

@@ -269,15 +269,17 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.nav__link {
+.nav__item > button {
   color: rgb(255, 255, 255);
   font-size: 1.25rem;
   padding: 0.4rem;
   display: flex;
   border-radius: 5rem;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
 }
-
-.active-link {
+.nav__item > button:hover {
   background: linear-gradient(180deg, rgb(254, 156, 55), rgba(218, 96, 38, 0.2));
   box-shadow: 0 0 16px rgba(218, 96, 38, 0.2);
 }
