@@ -154,7 +154,7 @@ h4 {
 
 .card {
   background: rgb(105, 50, 55);
-  min-width: 300px;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
