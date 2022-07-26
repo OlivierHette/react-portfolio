@@ -1,6 +1,10 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
 import groupomania from '../images/projects_groupomania.webp';
+import kanap from '../images/kanap-projects.webp';
+import piiquante from '../images/piiquante-projects.webp';
+import trocsalon from '../images/troc-projects.webp';
+import mdb from '../images/mdb-projects.webp';
 
 const projectsArray = [
   {
@@ -14,35 +18,35 @@ const projectsArray = [
   },
   {
     id: 2,
-    image: groupomania,
-    alt: 'Groupomania projet full stack',
-    title: 'Site e-commerce en JavaScript',
+    image: kanap,
+    alt: 'Kanap projet front end',
+    title: 'Site e-commerce en JS',
     subtitle: 'Avec JavaScript(ES6), HTML5 et CSS3',
-    link: 'Démo',
-    url: '#',
+    link: 'Code',
+    url: 'https://github.com/OlivierHette/Kanap-JavaScript',
   },
   {
     id: 3,
-    image: groupomania,
-    alt: 'Groupomania projet full stack',
+    image: piiquante,
+    alt: 'Piiquante projet backend',
     title: 'API sécurisée en JavaScript',
     subtitle: 'Avec NodeJs, Express et MongoDB',
-    link: 'Démo',
-    url: '#',
+    link: 'Code',
+    url: 'https://github.com/OlivierHette/piiquante',
   },
   {
     id: 4,
-    image: groupomania,
-    alt: 'Groupomania projet full stack',
+    image: trocsalon,
+    alt: 'TrocSalon projet wordpress',
     title: 'Site vitrine pour TrocSalon.fr',
     subtitle: 'Avec WordPress et Divi',
     link: 'Démo',
-    url: 'https://trocsalon.fr',
+    url: 'https://trocsalon.fr/',
   },
   {
     id: 5,
-    image: groupomania,
-    alt: 'Groupomania projet full stack',
+    image: mdb,
+    alt: 'Maison de beauté paris projet site vitrine',
     title: 'Site vitrine pour institut de beauté',
     subtitle: 'Avec HTML5, CSS3, Sass et JavaScript',
     link: 'Démo',
@@ -72,7 +76,9 @@ function Projects() {
                 <h4 className='text--md'>{project.title}</h4>
                 <span className='text--xs'>{project.subtitle}</span>
                 <a href={project.url}
-                  className='card-link text--sm'>
+                  className='card-link text--sm'
+                  target="_blank"
+                  rel="noopener noreferrer">
                   {project.link} <span className="arrow-link">➔</span>
                 </a>
               </div>

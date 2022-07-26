@@ -1,5 +1,6 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
+import 'boxicons';
 
 function Contact() {
   return (
@@ -10,7 +11,8 @@ function Contact() {
       </div>
       <div className="container-card">
         <div className="card card--contact">
-          <i className='bx bx-mail-send bx-md'></i>
+          {/* <i className='bx bx-mail-send bx-md'></i> */}
+          <box-icon name='mail-send' color='#fe9c37' ></box-icon>
           <h4 className="text--md">Email</h4>
           <span className="text--sm">contact@olivierhette.fr</span>
           <a href="mailto:contact@olivierhette.fr"
@@ -20,7 +22,9 @@ function Contact() {
         </div>
 
         <div className="card card--contact">
-          <i className='bx bxl-linkedin-square bx-md' ></i>
+          {/* <i className='bx bxl-linkedin-square bx-md' ></i> */}
+          <box-icon name='linkedin-square' type='logo' color='#fe9c37' >
+          </box-icon>
           <h4 className="text--md">LinkedIn</h4>
           <span className="text--sm">linkedin.com/in/olivier-hette/</span>
           <a href="https://www.linkedin.com/in/olivier-hette/"
@@ -32,7 +36,8 @@ function Contact() {
         </div>
 
         <div className="card card--contact">
-          <i className='bx bxl-github bx-md' ></i>
+          {/* <i className='bx bxl-github bx-md' ></i> */}
+          <box-icon name='github' type='logo' color='#fe9c37' ></box-icon>
           <h4 className="text--md">GitHub</h4>
           <span className="text--sm">github.com/OlivierHette</span>
           <a href="https://github.com/OlivierHette"

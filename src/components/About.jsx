@@ -1,5 +1,6 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
+import 'boxicons';
 import pdpImg from '../images/profile-image.webp';
 import ScrollToButton from './ScrollToButton';
 
@@ -23,7 +24,9 @@ function About() {
         <div className="about__body">
           <div className="about__container">
             <div className="about__item">
-              <i className='bx bx-code-curly bx-sm' ></i>
+              {/* <i className='bx bx-code-curly bx-sm' ></i> */}
+              <box-icon name='code-curly' color='#fe9c37' >
+              </box-icon>
               <div className="about__item-text">
                 <h4>Experiences</h4>
                 <span className='text--xs'>+ 1 an</span>
@@ -31,7 +34,9 @@ function About() {
             </div>
 
             <div className="about__item">
-              <i className='bx bx-briefcase-alt bx-sm' ></i>
+              {/* <i className='bx bx-briefcase-alt bx-sm' ></i> */}
+              <box-icon name='briefcase-alt' color='#fe9c37' >
+              </box-icon>
               <div className="about__item-text">
                 <h4>Missions</h4>
                 <span className='text--xs'>+ 10 projets</span>
@@ -39,7 +44,10 @@ function About() {
             </div>
 
             <div className="about__item">
-              <i className='bx bxs-graduation bx-sm'></i>
+              {/* <i className='bx bxs-graduation bx-sm'></i> */}
+              {/* <box-icon name='graduation' type='solid' color='#fe9c37' >
+              </box-icon> */}
+              <box-icon name='dna' color='#fe9c37' ></box-icon>
               <div className="about__item-text">
                 <h4>Formation</h4>
                 <span className='text--xs'>Bac +2</span>

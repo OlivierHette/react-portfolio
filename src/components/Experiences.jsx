@@ -1,5 +1,6 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
+import 'boxicons';
 
 const abilityFront = [
   {id: 1, name: 'HTML5', level: 'Avancé'},
@@ -36,7 +37,13 @@ function Experiences() {
             {abilityFront.map((ability) => {
               return (
                 <div key={ability.id} className="experiences__ability">
-                  <i className='bx bxs-badge-check bx-sm'></i>
+                  {/* <i className='bx bxs-badge-check bx-sm'></i> */}
+                  <box-icon className='icons'
+                    name='badge-check'
+                    type='solid'
+                    color='#FE9C37'
+                    size='sm' >
+                  </box-icon>
                   <div className="experiences__ability-text">
                     <h4>{ability.name}</h4>
                     <span className='text--xs'>{ability.level}</span>
@@ -54,7 +61,13 @@ function Experiences() {
             { abilityBack.map((ability) => {
               return (
                 <div key={ability.id} className="experiences__ability">
-                  <i className='bx bxs-badge-check bx-sm'></i>
+                  {/* <i className='bx bxs-badge-check bx-sm'></i> */}
+                  <box-icon className='icons'
+                    name='badge-check'
+                    type='solid'
+                    color='#FE9C37'
+                    size='sm'>
+                  </box-icon>
                   <div className="experiences__ability-text">
                     <h4>{ability.name}</h4>
                     <span className='text--xs'>{ability.level}</span>

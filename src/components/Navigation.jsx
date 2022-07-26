@@ -11,33 +11,37 @@ function Navigation() {
         <ul className="nav__list">
 
           <li className="nav__item">
-            <ScrollToButton
-              toId="home">
-              <i className='bx bx-home-alt' ></i>
+            <ScrollToButton toId="home" label="Accueil">
+              {/* <i className='bx bx-home-alt' ></i> */}
+              <box-icon color='white' name='home-alt-2'></box-icon>
             </ScrollToButton>
           </li>
 
           <li className="nav__item">
-            <ScrollToButton toId="about">
-              <i className='bx bx-user' ></i>
+            <ScrollToButton toId="about" label="A propos">
+              {/* <i className='bx bx-user' ></i> */}
+              <box-icon color='white' name='user'></box-icon>
             </ScrollToButton>
           </li>
 
           <li className="nav__item">
-            <ScrollToButton toId="experiences">
-              <i className='bx bx-code-block' ></i>
+            <ScrollToButton toId="experiences" label="Experiences">
+              {/* <i className='bx bx-code-block' ></i> */}
+              <box-icon color='white' name='code-block' ></box-icon>
             </ScrollToButton>
           </li>
 
           <li className="nav__item">
-            <ScrollToButton toId="projects">
-              <i className='bx bx-briefcase-alt' ></i>
+            <ScrollToButton toId="projects" label="Projets">
+              {/* <i className='bx bx-briefcase-alt' ></i> */}
+              <box-icon color='white' name='briefcase-alt' ></box-icon>
             </ScrollToButton>
           </li>
 
           <li className="nav__item">
-            <ScrollToButton toId="contact">
-              <i className='bx bx-message-square-detail' ></i>
+            <ScrollToButton toId="contact" label="Contact">
+              {/* <i className='bx bx-message-square-detail' ></i> */}
+              <box-icon name='message-detail' color='white'></box-icon>
             </ScrollToButton>
           </li>
 
