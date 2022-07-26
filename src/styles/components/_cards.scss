@@ -8,11 +8,16 @@
   border-radius: 13px;
   padding: 20px 10px;
   margin: 0 10px;
+  @include media-min("small-down") {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 
   &__text {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    max-width: 280px - 20px;
   }
 
   &-link {
@@ -28,6 +33,9 @@
 
   &--contact {
     gap: 0;
+    @include media-min("medium-up") {
+      min-width: auto;
+    }
   }
   & > i {
     color: $quaternary-color;

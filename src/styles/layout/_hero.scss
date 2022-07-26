@@ -10,4 +10,8 @@
     min-width: 300px;
     justify-content: space-around;
   }
+
+  @include media-min("medium-up") {
+    margin-top: 160px;
+  }
 }

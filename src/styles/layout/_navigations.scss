@@ -35,6 +35,10 @@
     border-radius: 4rem;
     padding: 1rem 2.25rem;
     backdrop-filter: blur(10px);
+
+    @include media-min("small-down") {
+      width: 340px;
+    }
   }
 
   &__list {

@@ -28,7 +28,7 @@ function Experiences() {
         <h3>Mon experiences</h3>
       </div>
 
-      <div className="container--card">
+      <div className="container-card container-card--grid">
         <div className="card">
           <h3>FrontEnd</h3>
           <div className="experiences__container__ability">

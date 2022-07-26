@@ -46,6 +46,7 @@ td, th {
 
 /* Abstracts */
 /* colors */
+/* media query */
 /* Base */
 body {
   background: rgb(26, 44, 68);
@@ -62,6 +63,12 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -71,15 +78,23 @@ a {
   max-width: 968px;
   margin: 0 1rem;
 }
-.container--about {
-  display: flex;
-  justify-content: space-between;
-  width: 300px;
-}
-.container--card {
+.container-card {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .container-card {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-card--grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 607px;
+    margin: 0 auto;
+  }
 }
 
 h1 {
@@ -172,10 +187,17 @@ h4 {
   padding: 20px 10px;
   margin: 0 10px;
 }
+@media screen and (min-width: 425px) {
+  .card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
 .card__text {
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  max-width: 260px;
 }
 .card-link {
   margin-top: 5px;
@@ -189,15 +211,17 @@ h4 {
 .card--contact {
   gap: 0;
 }
+@media screen and (min-width: 768px) {
+  .card--contact {
+    min-width: auto;
+  }
+}
 .card > i {
   color: rgb(254, 156, 55);
 }
 
 /* Layouts */
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background-color: rgb(26, 44, 68);
   padding-top: 20px;
@@ -271,7 +295,7 @@ header {
 .nav__menu {
   position: fixed;
   bottom: 1rem;
-  background-color: rgba(218, 96, 38, 0.8);
+  background-color: rgba(218, 96, 38, 0.6);
   width: 280px;
   left: 0;
   right: 0;
@@ -279,6 +303,11 @@ header {
   border-radius: 4rem;
   padding: 1rem 2.25rem;
   backdrop-filter: blur(10px);
+}
+@media screen and (min-width: 425px) {
+  .nav__menu {
+    width: 340px;
+  }
 }
 .nav__list {
   display: flex;
@@ -304,7 +333,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
   gap: 30px;
 }
 .section__title {
@@ -314,6 +342,11 @@ header {
 }
 .section--card {
   align-items: stretch;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    gap: 50px;
+  }
 }
 
 .hero__intro {
@@ -326,7 +359,41 @@ header {
   min-width: 300px;
   justify-content: space-around;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    margin-top: 160px;
+  }
+}
 
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+.about__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .about__body > button {
+    align-self: flex-start;
+  }
+}
 .about__item {
   display: flex;
   flex-direction: column;
@@ -349,6 +416,12 @@ header {
 .about__content-text {
   text-align: justify;
   margin: 0 10px;
+  max-width: 397px;
+}
+@media screen and (min-width: 768px) {
+  .about__content-text {
+    margin: 0;
+  }
 }
 
 .experiences__container {

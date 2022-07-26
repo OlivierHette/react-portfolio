@@ -14,9 +14,12 @@ body {
   }
 }
 
-// main {
-//   // overflow: hidden;
-// }
+main {
+  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
 
 a {
   text-decoration: none;
@@ -27,16 +30,26 @@ a {
   max-width: 968px;
   margin: 0 1rem;
 
-  &--about {
-    display: flex;
-    justify-content: space-between;
-    // align-items: center;
-    width: 300px;
-  }
-
-  &--card {
+  &-card {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    
+    @include media-min("medium-up") {
+      flex-direction: row;
+      // gap: 0;
+      // max-width: 607px;
+      // margin: 0 auto;
+    }
+
+    &--grid {
+      @include media-min("medium-up") {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // gap: 0;
+        max-width: 607px;
+        margin: 0 auto;
+      }
+    }
   }
 }

@@ -1,0 +1,17 @@
+@mixin media-min($key) {
+  @media screen and (min-width: map-get($breakpoints, $key)) {
+   & { @content; }   
+  }
+}
+
+@mixin media-min-perso($value) {
+  @media screen and (min-width: $value) {
+      & { @content; }
+  }
+}
+
+@mixin media-max($key) {
+  @media screen and (max-width: map-get($breakpoints, $key - 1px)) {
+      & { @content; }   
+ }
+}
